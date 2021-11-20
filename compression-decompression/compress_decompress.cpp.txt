@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+#define ll long long int 
+using namespace std;
+
+// string compressed(string s){
+    // map<char, int> mp;
+    // int n = s.size();
+    // for(int i=0; i<n; i++){
+    //     mp[s[i]]++;
+    // }
+    
+// }
+
+int main(){
+    int t; cin>>t;
+    while(t--){
+        string s; cin>>s;
+        string compressed, decompressed;
+        unordered_map<char, int> mp;
+        int n = s.size();
+        for(int i=0; i<n; i++){
+            mp[s[i]]++;
+        }
+        for(auto &x: mp){
+            compressed += x.first;
+        }
+        
+        for(auto &x: mp){
+            while(x.second--){
+                decompressed += x.first;
+            }
+        }
+        // compressed = compress(s);
+        // decompressed =decompress(s);
+        cout<<"Compressed String: "<<compressed<<"\n";
+        cout<<"Decompressed String: "<<decompressed<<"\n";
+        cout<<"\n";
+    }
+    
+}

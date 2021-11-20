@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    
+    int chunk_number;
+    vector<pair<int, vector<char> v> vec;
+    for(int i=0; i<)
+    
+}
+Here, we have a input stream of data eg: "I am a programmer"
+we can use a data structure like "vector<pair<int, vector<char> v> vec" to solve this problem,
+here first value of the pair will store the chunk number and the second value, that is, the vector of type 
+char will be used to store the bytes of incoming stream data corresponding to every chunk number,
+then using this concept, we can receive our chunk in any order and then when user calls the read function to 
+read the stream of data that came in, we can sort our "vector<pair<int, vector<char> v> vec" using the 
+first value of pair, that is, the chunk number, (using sort() function which will take nlogn time 
+to sort the whole data) and then corresponding to every chunk number after sorting it, we can 
+display(cout or print) the stream of data that we stored in out vector of char type.
+
+after sorting we can access our data using a for loop like
+for(auto &x: vec){
+    here we can print our stream of data
+    while(x.second.size()>0)
+    ans += x.second.v[index of every element of vector of char]
+    
+}
+cout<<ans<<"\n";
